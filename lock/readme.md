@@ -21,3 +21,4 @@
 在 main() 函数中，我们创建了 10 个线程，并为每个线程分配了 1000000 次自增操作。当所有线程完成后，程序会输出计数器的最终值。
 
 需要注意的是，这个例子同样使用了 GCC 内置函数 \_\_sync_val_compare_and_swap()，因此也不是一个纯粹的 load-linked 和 store-conditional 实现。
+test
