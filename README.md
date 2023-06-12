@@ -16,3 +16,4 @@ This demo is written by jyy in Nanjing University. It simlutes the execution of 
 
 3. python3 ./mosaic.py -c spinlock.py | grep stdout | sort | uniq
    spinlock.py：In the main function, two worker threads are created using sys_spawn(). One worker uses ( and ) as the enter and exit characters, while the other worker uses [ and ]. This exhaustively tests all possible combinations of enter and exit characters to ensure that the locking mechanism is working correctly.
+   you can execute `python3 os-modal.py ./threads.py`, obversve execution results.
