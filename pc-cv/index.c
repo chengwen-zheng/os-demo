@@ -19,6 +19,8 @@ void Tproduce()
         }
         printf("(");
         count++;
+        // slingal the wrong threads。
+        // maybe it is Tproduce. when there are more than 2 threads, it will be wrong
         cond_signal(&cv);
         mutex_unlock(&lk);
     }
@@ -35,6 +37,8 @@ void Tconsume()
         }
         printf(")");
         count--;
+        // slingal the wrong threads。
+        // maybe it is Tconsume. when there are more than 2 threads, it will be wrong
         cond_signal(&cv);
         mutex_unlock(&lk);
     }

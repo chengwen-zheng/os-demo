@@ -5,3 +5,8 @@
 此时另一个 Tconsume 开始执行，打印一个右括号，并执行 signal 唤醒一个线程
 Tconsume 被唤醒，因此打印出 ...())
 我们看到，Tproduce 只希望唤醒消费者；Tconsume 只希望唤醒生产者，因此可以用两个条件变量解决这个问题。
+
+gcc index.c
+./a.out 2 2
+
+对比 pc-mutex 观察
