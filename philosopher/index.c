@@ -9,6 +9,14 @@ void Tphilosopher(int id)
 {
     int lhs = (id + N - 1) % N;
     int rhs = id % N;
+
+    // Enforce lock ordering
+    if (lhs > rhs)
+    {
+        int tmp = lhs;
+        lhs = rhs;
+        rhs = tmp;
+    }
     while (1)
     {
         // Come to table
